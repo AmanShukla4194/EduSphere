@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduSphere — Courses</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header sticky">
+    <div class="container header-inner">
+      <h1 class="brand">EduSphere</h1>
+      <div class="header-controls">
+        <span id="userBadge"></span>
+        <button id="logoutBtn" class="btn primary">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">  
+      <label>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="Tech">Tech</option>
+          <option value="Creative">Creative</option>
+          <option value="Business">Business</option>
+        </select>
+      </label>
+      <input id="searchInput" placeholder="Search courses..." />
+    </section>
+
+    <section id="coursesGrid" class="grid"></section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalBody"></p>
+      <div class="modal-actions">
+        <button id="modalOk" class="btn primary">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

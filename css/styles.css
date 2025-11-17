@@ -1,0 +1,217 @@
+/* EduSphere - styles.css */
+:root {
+  --bg: #d3ccf9;
+  --card: #a5bef7;
+  --muted: #0d0e0e;
+  --accent: #2563eb;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(12, 23, 60, 0.08);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #0b1220;
+  background-image: url("/download.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.login-card {
+  width: 380px;
+  text-align: center;
+}
+h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+.muted {
+  color: var(--muted);
+}
+.small {
+  font-size: 12px;
+}
+label {
+  display: block;
+  text-align: left;
+  margin: 12px 0;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+}
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #e6e9ef;
+  padding: 8px 12px;
+}
+.site-header {
+  background: #f17f7f;
+  border-bottom: 1px solid #eef2f7;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+.brand {
+  font-size: 18px;
+  margin: 0;
+}
+.header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.filters {
+  display: flex;
+  gap: 18px;
+  align-items: center; /* keep whole row centered */
+  padding: 16px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.course-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 12px;
+}
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(12, 23, 60, 0.08);
+}
+.course-title {
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.course-desc {
+  color: var(--muted);
+  font-size: 14px;
+}
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.course-page .card {
+  padding: 22px;
+}
+.resources {
+  margin-top: 12px;
+}
+.resource-link {
+  display: block;
+  margin: 6px 0;
+  color: var(--accent);
+  text-decoration: none;
+}
+.quiz-question {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f1f4f8;
+}
+.option {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 6px 0;
+  border: 1px solid #eef2f7;
+  cursor: pointer;
+}
+.option.selected {
+  background: #eef6ff;
+  border-color: #cfe4ff;
+}
+.footer-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 10, 22, 0.45);
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 480px;
+  box-shadow: 0 14px 36px rgba(6, 10, 22, 0.2);
+}
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .login-card {
+    width: 100%;
+  }
+  .header-inner {
+    padding: 10px;
+  }
+  .container {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduSphere — Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="centered">
+    <div class="card login-card">
+      <h1>EduSphere</h1>
+      <p class="muted">Lightweight Learning Management Mini-Portal</p>
+      <form id="loginForm" novalidate>
+        <label>Username
+          <input id="username" type="text" placeholder="at least 4 characters" required />
+        </label>
+        <label>Email
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </label>
+        <button class="btn primary" id="loginBtn" type="submit">Login</button>
+      </form>
+      <!-- <p class="muted small">No backend — demo uses client-side storage only.</p> -->
+    </div>
+  </main>
+
+  <!-- modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalBody"></p>
+      <div class="modal-actions">
+        <button id="modalOk" class="btn primary">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
