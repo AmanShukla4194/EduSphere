@@ -18,7 +18,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: #0b1220;
-  background-image: url('../assets/download.svg');
+  background-image: url('https://raw.githubusercontent.com/AmanShukla4194/EduSphere/main/assets/download.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
